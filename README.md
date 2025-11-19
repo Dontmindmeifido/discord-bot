@@ -88,21 +88,21 @@ Cancel a scheduled reminder. Example:
 
 ## Technical Highlights
 
-- **Async Queue Architecture**:  
+**Async Queue Architecture**:  
 - The bot uses `asyncio.Queue` to schedule tasks concurrently.  
 - A background worker dequeues tasks and waits asynchronously for the execution time.  
 
-- **Concurrent Task Handling**:  
+**Concurrent Task Handling**:  
 - Multiple reminders from different users can be scheduled without blocking each other.  
 - DM sending, countdown tracking, and command processing all run asynchronously.  
 
-- **Modular & Reusable Design**:  
+**Modular & Reusable Design**:  
 - `scheduler.py` handles all task logic and timing.  
 - `commands.py` handles Discord commands and task registration.  
 - `embeds.py` generates all rich message embeds.  
 - This separation makes the code easier to maintain, test, and extend.  
 
-- **Error Handling & Robustness**:  
+**Error Handling & Robustness**:  
 - Gracefully handles invalid time formats.  
 - Detects DM permission errors and continues without crashing.  
 - Task cancellations and multi-user handling are safe and predictable.  
