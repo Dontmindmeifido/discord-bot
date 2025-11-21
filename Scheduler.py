@@ -2,12 +2,10 @@ import asyncio
 from datetime import datetime, timedelta
 import re
 
-# Async queue and task store
 task_queue = asyncio.Queue()
 tasks_by_user = {}
 task_counter = 1
 
-# --- Utilities ---
 def parse_time(time_str):
     """Parse time like 10s, 5m, 1h."""
     match = re.match(r"(\d+)([smh])", time_str)

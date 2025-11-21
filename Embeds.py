@@ -1,6 +1,5 @@
 import discord
 
-# --- Embed Builders ---
 def reminder_scheduled_embed(task):
     embed = discord.Embed(
         title="✅ Reminder Scheduled",
