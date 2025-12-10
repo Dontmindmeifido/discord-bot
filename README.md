@@ -37,15 +37,11 @@ The Smart Task Scheduler Bot is a **personal reminder system for Discord** that 
 - `!remindme <time> <message>`  
   Schedule a DM reminder. Example:
 
-  !remindme 10s Take a break 
-
 - `!tasks`  
 List all pending reminders with countdowns.  
 
 - `!cancel <task_id>`  
-Cancel a scheduled reminder. Example:  
-
-  !cancel 2
+Cancel a scheduled reminder.
 
 ### 1. Schedule a reminder
 ![RemindMe Command](images/image1.png)
